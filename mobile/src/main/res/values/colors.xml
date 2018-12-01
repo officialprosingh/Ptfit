@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008d36</color>
+    <color name="colorPrimaryDark">#006633</color>
+    <color name="colorAccent">#008d36</color>
+    <color name="colorPlus">#85c191</color>
+    <color name="colorMinus">#ce8e8e</color>
+
+
+    <color name="lightgray">#ededed</color>
+    <color name="deeppurple">#7c4dff</color>
+    <color name="yello">#ffb300</color>
+    <color name="green">#00bfa5</color>
+    <color name="darkblue">#23283a</color>
+    <color name="black">#000000</color>
+    <color name="pink">#fe104d</color>
+    <color name="startblue">#09c6df</color>
+    <color name="endblue">#0bcce6</color>
+    <color name="primaryDark">#292b3d</color>
+    <color name="graylight">#fafafa</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="initButton">#1db17a</color>
+    <color name="initButtonPressed">#72f9c7</color>
+    <color name="adButton">#3d8fc7</color>
+    <color name="adButtonPressed">#7ec8fb</color>
+    <color name="buttonText">#ffffff</color>
+    <color name="autoCacheLabel">#f2004b</color>
+    <color name="lineColor">#e5e6e8</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="editTextBG">#DADADA</color>
+
+    <color name="textColor">#6e6e6e</color>
+</resources>

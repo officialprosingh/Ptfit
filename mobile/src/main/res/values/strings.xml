@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PT Fit</string>
+
+    <string name="textValueBPM">80</string>
+    <string name="textValueSpeed">100</string>
+    <string name="textValuePace">100</string>
+</resources>

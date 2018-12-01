@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".WelcomeActivity">
+
+
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="116dp"
+        android:layout_height="114dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@mipmap/start_button150dpi"
+        android:onClick="startRunning"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="307dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="Start Running"
+        android:textColor="@android:color/background_dark"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+
+
+    <Button
+        android:id="@+id/Sign_out"
+        android:layout_width="129dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:background="@drawable/run_icon" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="328dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="165dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Number of kilometers:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.557" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:text="Estimated time:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="72dp"
+        android:background="@null"
+        android:onClick="decreaseTime"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:srcCompat="@drawable/ic_remove_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:onClick="increaseTime"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:onClick="decreaseKilometers"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.605"
+        app:srcCompat="@drawable/ic_remove_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:onClick="increaseKilometers"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.568"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="00:00"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton6"
+        app:layout_constraintHorizontal_bias="0.696"
+        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.558" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="199dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonStop"
+        app:layout_constraintGuide_end="90dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineVMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="184dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="309dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineH3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintGuide_begin="170dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineHSpeedPace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPlayPause"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:onClick="playPause"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHBottom"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineH1"
+        app:srcCompat="@drawable/ic_pause_black_86dp" />
+
+    <ImageButton
+        android:id="@+id/imageButtonStop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:onClick="stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guidelineH1"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVMiddle"
+        app:layout_constraintTop_toTopOf="@+id/guidelineH1"
+        app:srcCompat="@drawable/ic_stop_black_86dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineHBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1" />
+
+    <TextView
+        android:id="@+id/textSpeed"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="10"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHSpeedPace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVMiddle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275" />
+
+    <TextView
+        android:id="@+id/valueBPM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/textValueBPM"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineH3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVMiddle"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHSpeedPace"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <TextView
+        android:id="@+id/textStepsPerMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/textValuePace"
+        android:textColor="@android:color/background_dark"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineH3"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVMiddle"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.454"
+        tools:text="@string/textValuePace"/>
+
+    <TextView
+        android:id="@+id/textKMh"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Km/h"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHSpeedPace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVMiddle"
+        app:layout_constraintTop_toBottomOf="@+id/textSpeed"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textBPM"
+        android:layout_width="97dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Heart Beat"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineH3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVMiddle"
+        app:layout_constraintTop_toBottomOf="@+id/valueBPM"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="138dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="260dp" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDecreasePace"
+        android:layout_width="74dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:onClick="decreasePace"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineH1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.645"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineH2"
+        app:layout_constraintVertical_bias="0.534"
+        app:srcCompat="@drawable/ic_remove_black_120dp" />
+
+    <ImageButton
+        android:id="@+id/imageButtonIncreasePace"
+        android:layout_width="71dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:onClick="increasePace"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineH1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.324"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guidelineH2"
+        app:layout_constraintVertical_bias="0.534"
+        app:srcCompat="@drawable/ic_add_black_120dp" />
+
+    <TextView
+        android:id="@+id/textPace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="160"
+        android:textColor="@android:color/background_dark"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineH1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guidelineH2"
+        app:layout_constraintVertical_bias="0.535" />
+
+    <TextView
+        android:id="@+id/textStepsMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Steps/min"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineH3"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVMiddle"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStepsPerMin"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textObjective"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="My objective:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textPace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineH3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textStepMin2"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Steps/min"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineH1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPace"
+        app:layout_constraintVertical_bias="0.647" />
+
+    <ImageView
+        android:id="@+id/imageSmiley"
+        android:layout_width="159dp"
+        android:layout_height="153dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineH3"
+        app:srcCompat="@drawable/happy" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "973994776752",
+    "firebase_url": "https://pt-fit-e3fae.firebaseio.com",
+    "project_id": "pt-fit-e3fae",
+    "storage_bucket": "pt-fit-e3fae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973994776752:android:860faf6db12e60cf",
+        "android_client_info": {
+          "package_name": "online.propaans.ptfit.ptfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973994776752-4ipbm4a12jbk5av9umcohvv90l2c1os0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "online.propaans.ptfit.ptfit",
+            "certificate_hash": "2bdb1a687e7ef889d00b535cc1f0ad626ac83452"
+          }
+        },
+        {
+          "client_id": "973994776752-qhec8kms66dob477mqnbprhg29klgolc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvmKcGMAMJal2XlL72guC3DjqQwfmmKaA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973994776752-qhec8kms66dob477mqnbprhg29klgolc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
